@@ -1,0 +1,20 @@
+# Design Tokens
+
+## Use when
+
+Creating, extending, normalizing, or migrating a product's design tokens.
+
+## Procedure
+
+1. Inventory existing variables, theme files, utility configuration, component constants, and hardcoded values.
+2. Preserve existing public token names when changing them would create unnecessary migration risk.
+3. Prefer a three-tier model when the project can support it: primitive values → semantic intent → component tokens.
+4. Use DTCG-compatible structure for portable token artifacts unless the existing system has a stronger native contract.
+5. Define light/dark or other theme mappings at the semantic layer rather than duplicating component logic.
+6. Include color, typography, spacing, sizing, radius, border, elevation/shadow, motion, and breakpoint concepts only where the product actually needs them.
+7. Validate aliases/references and detect unresolved tokens.
+8. Render representative components before asserting that token changes are visually safe.
+
+## Failure conditions
+
+Do not create token aliases that resolve cyclically or to missing values. Do not claim a theme migration is complete while material hardcoded design values remain unexplained.
