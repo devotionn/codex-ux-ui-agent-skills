@@ -1,8 +1,9 @@
+---
+name: design-tokens
+description: Create, extend, normalize, audit, or migrate a product's design tokens. Use when work involves colors, typography, spacing, sizing, radius, borders, elevation, motion, breakpoints, themes, DTCG token files, semantic aliases, or replacing repeated hardcoded design values with a maintainable token system.
+---
+
 # Design Tokens
-
-## Use when
-
-Creating, extending, normalizing, or migrating a product's design tokens.
 
 ## Procedure
 
@@ -14,6 +15,13 @@ Creating, extending, normalizing, or migrating a product's design tokens.
 6. Include color, typography, spacing, sizing, radius, border, elevation/shadow, motion, and breakpoint concepts only where the product actually needs them.
 7. Validate aliases/references and detect unresolved tokens.
 8. Render representative components before asserting that token changes are visually safe.
+
+## Deliverables
+
+- token changes or migration plan
+- alias/semantic mapping
+- impacted component inventory
+- validation and render evidence
 
 ## Failure conditions
 

@@ -1,8 +1,9 @@
+---
+name: ux-writing
+description: Write or revise product interface copy. Use for labels, buttons, validation, errors, empty states, onboarding, confirmations, destructive actions, status messages, helper text, or terminology consistency where copy must support a real user task and existing product behavior.
+---
+
 # UX Writing
-
-## Use when
-
-Writing or revising interface copy, labels, validation, errors, empty states, onboarding, confirmations, or destructive-action messaging.
 
 ## Procedure
 
@@ -14,6 +15,10 @@ Writing or revising interface copy, labels, validation, errors, empty states, on
 6. Make destructive actions explicit about scope and reversibility.
 7. Keep labels stable across UI, documentation, and validation.
 8. Check that text expansion/localization will not break the component contract where relevant.
+
+## Deliverables
+
+Return final copy in context, grouped by screen/component/state when more than a few strings are involved.
 
 ## Failure conditions
 

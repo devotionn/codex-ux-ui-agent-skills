@@ -1,8 +1,9 @@
+---
+name: design-system
+description: Create or materially evolve a product-wide design system. Use when defining or consolidating design principles, tokens, reusable components, state contracts, typography, spacing, layout, iconography, motion, accessibility, responsive conventions, documentation, or migration rules across multiple product surfaces.
+---
+
 # Design System
-
-## Use when
-
-Creating or materially evolving a product-wide design system.
 
 ## Procedure
 
@@ -15,6 +16,14 @@ Creating or materially evolving a product-wide design system.
 7. Provide migration guidance for legacy values/components.
 8. Add deterministic validation where rules can be measured.
 9. Create representative rendered harnesses for system-level regression checks.
+
+## Deliverables
+
+- system principles and architecture
+- token and component contracts
+- accessibility and responsive conventions
+- migration guidance
+- validation strategy
 
 ## Failure conditions
 

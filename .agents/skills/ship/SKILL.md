@@ -1,8 +1,9 @@
+---
+name: ship
+description: Run the final UI handoff or release-readiness pass for implemented product design work. Use when a UI change is believed ready for merge, handoff, demo, or release and needs diff review, relevant tests, rendered verification, responsive/state/accessibility checks, final critique, and an evidence-based completion report.
+---
+
 # Ship UI Work
-
-## Use when
-
-The implementation is believed to be ready for handoff, merge, or release.
 
 ## Procedure
 
@@ -19,4 +20,6 @@ The implementation is believed to be ready for handoff, merge, or release.
 
 Return four explicit sections: Implemented, Verified, Not verified, Remaining.
 
-Never report skipped, unavailable, or source-only checks as passed.
+## Failure conditions
+
+Never report skipped, unavailable, source-only, or inferred checks as passed.

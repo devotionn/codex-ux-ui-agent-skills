@@ -1,13 +1,14 @@
+---
+name: accessibility-audit
+description: Audit a page, component, flow, or design system for accessibility. Use for WCAG reviews, keyboard/focus checks, semantic structure, labels, contrast, target size, errors and status messages, reduced motion, responsive reflow, zoom, or when UI work needs an accessibility release gate.
+---
+
 # Accessibility Audit
-
-## Use when
-
-Auditing a page, component, flow, or design system for accessibility.
 
 ## Procedure
 
 1. Prefer rendered inspection over source-only inference when runtime/browser access exists.
-2. Check semantic structure, names/roles/values, heading hierarchy, landmarks, labels and descriptions.
+2. Check semantic structure, names/roles/values, heading hierarchy, landmarks, labels, and descriptions.
 3. Check full keyboard operation, focus order, focus visibility, traps, and escape behavior.
 4. Check text/non-text contrast and state-specific contrast against the project's target WCAG level.
 5. Check pointer target sizing and alternatives to drag/gesture-only interactions.
@@ -18,7 +19,11 @@ Auditing a page, component, flow, or design system for accessibility.
 
 ## Output
 
-Prioritize findings by user impact and release risk. Every finding should include evidence, affected surface, remediation, and verification method.
+Prioritize findings by user impact and release risk. Every material finding should include evidence, affected surface, remediation, and verification method.
+
+## Verification
+
+Use automated tools when available, but pair them with manual keyboard, focus, semantic, responsive, and interaction checks.
 
 ## Failure conditions
 

@@ -1,8 +1,9 @@
+---
+name: motion-spec
+description: Define, review, or implement purposeful UI motion. Use for transitions, enter/exit behavior, progress feedback, micro-interactions, animated state changes, motion tokens, reduced-motion behavior, or when animation needs a clear functional purpose and runtime verification.
+---
+
 # Motion Spec
-
-## Use when
-
-Defining or implementing UI motion, transitions, enter/exit behavior, progress feedback, or interaction animation.
 
 ## Procedure
 
@@ -13,6 +14,10 @@ Defining or implementing UI motion, transitions, enter/exit behavior, progress f
 5. Respect `prefers-reduced-motion` or the native platform equivalent.
 6. Avoid animations that delay critical actions or conceal content until animation completion.
 7. Verify actual runtime behavior where possible.
+
+## Deliverables
+
+Specify trigger, target, duration/token, easing/token, enter/exit behavior, interruption behavior, and reduced-motion fallback for material motion.
 
 ## Failure conditions
 
