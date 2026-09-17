@@ -1,8 +1,16 @@
+---
+name: redesign
+description: Redesign or modernize an existing UI while preserving its product behavior. Use for requests such as make this page cleaner, improve the dashboard, modernize the interface, fix hierarchy or density, or perform a visual overhaul without intentionally changing routes, data contracts, actions, validation, or analytics.
+---
+
 # Redesign
 
-## Use when
+## Inputs
 
-Improving an existing UI without intentionally replacing its product behavior.
+- target page, route, component, or flow
+- current implementation and rendered state when available
+- user pain points or design goals
+- explicit behavior changes, if any
 
 ## Procedure
 
@@ -15,6 +23,13 @@ Improving an existing UI without intentionally replacing its product behavior.
 7. Compare before/after behavior and render representative states.
 8. Run available tests and gates.
 9. Critique the redesigned result independently of whether gates pass.
+
+## Deliverables
+
+- concise diagnosis of the current UI
+- implemented redesign or implementation-ready design specification
+- before/after behavior notes
+- verification evidence and remaining gaps
 
 ## Failure conditions
 

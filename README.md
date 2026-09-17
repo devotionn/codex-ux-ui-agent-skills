@@ -6,7 +6,27 @@ The goal is to turn Codex from a code generator into a design-aware implementati
 
 ## Status
 
-🚧 Early development — Phase 1 establishes the Codex-native instruction architecture before the full upstream knowledge layer and gates are ported.
+🚧 Early development — the Codex-native instruction architecture is usable now, while the deeper upstream knowledge layer and deterministic gate suite continue to be ported.
+
+## Team entry point
+
+For designers, product managers, and broad UI/UX tasks, start with:
+
+```text
+$product-design
+```
+
+`product-design` is the orchestration skill. It inspects the current product and routes work to the smallest relevant specialist skills such as `design-screen`, `redesign`, `design-component`, `accessibility-audit`, `design-review`, and `ship`.
+
+Designers should not need to memorize the specialist skill set.
+
+See [`docs/TEAM_USAGE.md`](docs/TEAM_USAGE.md) for team rollout, installation scopes, and Chinese prompt examples.
+
+## Codex skill compatibility
+
+Skills live under `.agents/skills/<skill-name>/SKILL.md` and include YAML `name` and `description` metadata so Codex can discover them and match tasks to skills.
+
+You can invoke a skill explicitly in Codex with `$skill-name` or browse installed skills with `/skills`. Repository-scoped skills can be checked into the product repository; user-scoped skills can be installed under `$HOME/.agents/skills`.
 
 ## Design principles
 
@@ -15,17 +35,20 @@ The goal is to turn Codex from a code generator into a design-aware implementati
 - **Preserve upstream strengths** — port the upstream token architecture, component knowledge, accessibility rules, taste doctrine, design-system library, framework adapters, workflows, tests, and objective gates where applicable.
 - **Framework-aware** — React, Next.js, Vue, SwiftUI, Flutter and other adapters should preserve native conventions rather than forcing one UI stack everywhere.
 - **No fake green** — unavailable browser/runtime checks must be reported as unavailable or failing, never silently treated as passing.
+- **Progressive disclosure** — keep broad routing lightweight and load specialist rules/references only when the task needs them.
 
 ## Target workflow
 
 ```text
 brief
   ↓
+$product-design
+  ↓
 inspect existing product + stack
   ↓
-select / infer design direction
+route to narrow design skills
   ↓
-DTCG tokens + component contracts
+DTCG tokens + component contracts when needed
   ↓
 implementation
   ↓
@@ -43,7 +66,8 @@ fix → verify → ship
 ```text
 AGENTS.md                 Codex project contract and router
 .agents/
-  skills/                 reusable Codex-oriented skill instructions
+  skills/                 reusable Codex skill instructions
+    product-design/       default team entry point
   rules/                  deeper design and implementation rules
 tokens/                    DTCG token knowledge and templates
 components/                component contracts and states
@@ -56,15 +80,16 @@ scripts/                   deterministic validation gates
 evals/                     cold-start agent evaluations
 tests/                     gate regression fixtures
 examples/                  rendered examples and harnesses
+docs/                      team rollout and project documentation
 ```
 
 ## Roadmap
 
-**Phase 1 — Codex foundation**: `AGENTS.md`, routing contract, skill format, attribution, architecture.
+**Phase 1 — Codex foundation**: `AGENTS.md`, routing contract, official skill metadata, team entry point, attribution, architecture.
 
 **Phase 2 — Knowledge port**: tokens, components, accessibility, taste, 138 design-system references, framework adapters.
 
-**Phase 3 — Skill port**: convert upstream runnable design skills into Codex-oriented reusable skills and workflows.
+**Phase 3 — Skill depth**: connect specialist skills to the imported local references and end-to-end workflows.
 
 **Phase 4 — Objective gates**: port and validate the upstream gate suite, including browser-backed checks.
 
