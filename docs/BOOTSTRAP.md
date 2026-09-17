@@ -1,0 +1,1 @@
+Bootstrap establishes the Codex-native orchestration layer only. It intentionally does not claim that the upstream 138 design systems or 44 gates have already been ported. Those land in later phases with their own verification.
